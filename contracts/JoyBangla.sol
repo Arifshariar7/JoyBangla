@@ -1,15 +1,13 @@
 pragma solidity >=0.4.22 <0.9.0;
 
 contract JoyBangla{
-    //Constructor
-    //Set total number of tokens
-    // Read the total number of tokens
     //name
-    //symbol
-    
     string public name="JoyBangla";
+    //symbol & standard
     string public symbol="JB";
     string public standard="JoyBangla Token v1.0";
+
+    // Read the total number of tokens
     uint256 public totalSupply;
     mapping(address=>uint256) public balanceOf; 
     mapping(address=>mapping(address=>uint256)) public allowance;
@@ -27,8 +25,10 @@ contract JoyBangla{
         uint256 _value
     );
 
+    //Constructor
 
     constructor (uint256 _initialSupply) public{
+    //Set total number of tokens
 
         balanceOf[msg.sender]=_initialSupply;
         totalSupply=_initialSupply;

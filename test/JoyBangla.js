@@ -1,4 +1,4 @@
-var JoyBangla = artifacts.require("JoyBangla")
+var JoyBangla = artifacts.require("./JoyBangla.sol")
 contract("JoyBangla", function (accounts) {
     it("initialize the contract with the current value", function () {
         return JoyBangla.deployed().then(function (instance) {
